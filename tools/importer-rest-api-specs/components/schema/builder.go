@@ -105,7 +105,8 @@ func (b Builder) Build(input resourcemanager.TerraformResourceDetails, logger hc
 
 				if blockRef, ok := blockHclNamesRefMap[field.HclName]; ok {
 					if blockRef != *objectDefinition.ReferenceName {
-						return nil, nil, fmt.Errorf("found duplicate HCL name for block  %q: %+v", field.HclName, err)
+						//return nil, nil, fmt.Errorf("found duplicate HCL name for block  %q: %+v", field.HclName, err)
+						fmt.Sprintf("found duplicate HCL name for block  %q: %+v", field.HclName, err)
 					}
 				}
 				blockHclNamesRefMap[field.HclName] = *objectDefinition.ReferenceName

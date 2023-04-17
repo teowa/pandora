@@ -19,6 +19,7 @@ var directAssignmentTypes = map[resourcemanager.TerraformSchemaFieldType]resourc
 	resourcemanager.TerraformSchemaFieldTypeTags:                   resourcemanager.TagsApiObjectDefinitionType,
 	resourcemanager.TerraformSchemaFieldTypeReference:              resourcemanager.ReferenceApiObjectDefinitionType,
 	resourcemanager.TerraformSchemaFieldTypeIdentitySystemAssigned: resourcemanager.SystemAssignedIdentityApiObjectDefinitionType,
+	resourcemanager.TerraformSchemaFieldTypeDictionary:             resourcemanager.DictionaryApiObjectDefinitionType,
 }
 
 var directAssignmentConstantTypesToStrings = map[resourcemanager.TerraformSchemaFieldType]string{
