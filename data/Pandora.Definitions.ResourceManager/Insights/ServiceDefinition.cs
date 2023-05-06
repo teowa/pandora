@@ -12,10 +12,10 @@ public partial class Service : ServiceDefinition
 {
     public string Name => "Insights";
     public string? ResourceProvider => "Microsoft.Insights";
-    public string? TerraformPackageName => null;
+    public string? TerraformPackageName => "monitor";
 
     public IEnumerable<TerraformResourceDefinition> TerraformResources => new List<TerraformResourceDefinition>
     {
-
+        new Terraform.DataCollectionRuleResource(),
     };
 }
