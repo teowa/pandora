@@ -12,10 +12,10 @@ public partial class Service : ServiceDefinition
 {
     public string Name => "GraphServices";
     public string? ResourceProvider => "Microsoft.GraphServices";
-    public string? TerraformPackageName => null;
+    public string? TerraformPackageName => "graph";
 
     public IEnumerable<TerraformResourceDefinition> TerraformResources => new List<TerraformResourceDefinition>
     {
-
+        new Terraform.AccountResource(),
     };
 }

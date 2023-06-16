@@ -23,11 +23,13 @@ func codeForMappings(input models.ResourceInput) (*string, error) {
 		schemaToSdkLines, err := helper.SchemaModelToSdkModelAssignmentLine(*mappingsForThisModel)
 		if err != nil {
 			//return nil, fmt.Errorf("building mappings from Schema Models to Sdk Models: %+v", err)
+			fmt.Printf("building mappings from Schema Models to Sdk Models: %+v", err)
 			continue
 		}
 		sdkToSchemaLines, err := helper.SdkModelToSchemaModelAssignmentLine(*mappingsForThisModel)
 		if err != nil {
 			//return nil, fmt.Errorf("building mappings from Sdk Models to Schema Models: %+v", err)
+			fmt.Printf("building mappings from Sdk Models to Schema Models: %+v", err)
 			continue
 		}
 		//// TODO: switch this out to something that differs by type
