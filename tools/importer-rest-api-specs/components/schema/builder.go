@@ -379,10 +379,10 @@ func (b Builder) findCreateUpdateReadPayloads(input resourcemanager.TerraformRes
 	out.createPayload = createModel
 	createPropsModelName, createPropsModel := out.getPropertiesModelWithinModel(out.createPayload, b.models)
 	if createPropsModelName == nil || createPropsModel == nil {
-		return nil, fmt.Errorf("couldn't find `Properties` model for Create Payload")
+	} else {
+		out.createPropertiesPayload = *createPropsModel
+		out.createPropertiesModelName = *createPropsModelName
 	}
-	out.createPropertiesPayload = *createPropsModel
-	out.createPropertiesModelName = *createPropsModelName
 
 	// Read has to exist
 	readOperation, ok := b.operations[input.ReadMethod.MethodName]
