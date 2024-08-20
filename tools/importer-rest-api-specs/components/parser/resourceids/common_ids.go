@@ -37,7 +37,7 @@ var commonIdTypes = []commonIdMatcher{
 	commonIdCloudServicesPublicIPAddress{},
 	commonIdExpressRouteCircuitPeering{},
 	commonIdNetworkInterfaceIPConfiguration{},
-	//commonIdP2sVPNGateway{},
+	// commonIdP2sVPNGateway{},
 	commonIdVirtualHubBGPConnection{},
 	commonIdVirtualHubIPConfiguration{},
 	commonIdVirtualMachineScaleSetIPConfiguration{},
@@ -57,6 +57,10 @@ var commonIdTypes = []commonIdMatcher{
 	// Misc data fixes
 	commonIdAutomationCompilationJob{}, // (@stephybun) CompilationJobId segment is defined in three different ways `jobId`, `compilationJobId` and `compilationJobName`
 	commonIdProvisioningService{},      // (@jackofallops): Inconsistent user specified fields in the swagger - `provisioningServices/{resourceName}` vs `provisioningServices/{provisioningServiceName}`
+
+	// Arc Kubernetes
+	commonIdArcKubernetesCluster{},
+	commonIdArcKubernetesProvisionedClusterInstance{},
 
 	// Bot Service
 	commonIdBotService{},
@@ -85,7 +89,7 @@ var commonIdTypes = []commonIdMatcher{
 
 	// Kubernetes
 	commonIdKubernetesCluster{},
-	//commonIdKubernetesFleet{},
+	// commonIdKubernetesFleet{},
 
 	// SQL
 	commonIdSqlDatabase{},
