@@ -361,16 +361,12 @@ func (d *SwaggerDefinition) fieldsForModel(modelName string, input spec.Schema, 
 }
 
 func (d *SwaggerDefinition) findTopLevelObject(name string) (*spec.Schema, error) {
-	for modelName, model := range d.swaggerSpecRaw.Definitions {
-		if modelName == name {
-			return &model, nil
-		}
+	if model, ok := d.swaggerSpecRaw.Definitions[name]; ok {
+		return &model, nil
 	}
 
-	for modelName, model := range d.swaggerSpecExtendedRaw.Definitions {
-		if modelName == name {
-			return &model, nil
-		}
+	if model, ok := d.swaggerSpecExtendedRaw.Definitions[name]; ok {
+		return &model, nil
 	}
 
 	return nil, fmt.Errorf("the top level object %q was not found", name)
