@@ -279,7 +279,7 @@ service "fluidrelay" {
 }
 service "frontdoor" {
   name      = "FrontDoor"
-  available = ["2020-04-01", "2020-05-01", "2024-02-01", "2025-03-01"]
+  available = ["2020-04-01", "2020-05-01", "2024-02-01", "2025-03-01", "2025-10-01"]
 }
 service "graphservicesprod" {
   name      = "GraphServices"
