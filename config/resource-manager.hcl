@@ -224,6 +224,10 @@ service "devtestlabs" {
   name      = "DevTestLab"
   available = ["2018-09-15"]
 }
+service "discovery" {
+  name      = "Discovery"
+  available = ["2026-06-01"]
+}
 service "digitaltwins" {
   name      = "DigitalTwins"
   available = ["2023-01-31"]
