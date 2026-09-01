@@ -34,6 +34,10 @@ service "applicationinsights" {
   name      = "ApplicationInsights"
   available = ["2015-05-01", "2020-02-02", "2020-11-20", "2022-04-01", "2022-06-15", "2023-06-01"]
 }
+service "applink" {
+  name      = "AppLink"
+  available = ["2025-08-01-preview"]
+}
 service "appplatform" {
   name      = "AppPlatform"
   available = ["2024-01-01-preview", "2024-05-01-preview"]
