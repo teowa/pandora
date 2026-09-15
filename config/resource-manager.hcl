@@ -660,7 +660,7 @@ service "web" {
 }
 service "webpubsub" {
   name      = "WebPubSub"
-  available = ["2024-03-01"]
+  available = ["2024-03-01", "2025-12-01-preview"]
 }
 service "workloads" {
   name      = "Workloads"
